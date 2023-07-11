@@ -1,0 +1,216 @@
+
+/* Home Page */
+
+
+#homeBody {
+  margin: 0;
+  margin-left: 0;
+}
+
+#homeTop {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.no-parallax {
+  background-color: white;
+  height: 50vh;
+  z-index: 999;
+}
+
+#description2 {
+  display: none;
+}
+
+section #description {
+  text-align: center;
+  font-size: 4rem;
+  width: 78%;
+}
+
+#logo {
+  position: absolute;
+  top: 25%;
+  width: 15%;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: 1;
+}
+
+.bg::after {
+  background: url("./media/pennington.jpg");
+  background-size: cover;
+  margin: 0;
+  margin-left: 0px;
+}
+
+
+.bottomHome {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+#selfPhotoDT {
+  width: 100%;
+}
+
+#selfPhotoMB {
+  display: none;
+}
+
+#aboutLink {
+  position: absolute;
+  top: 5%;
+  left: 17%;
+  margin: 0%;
+  width: 6%;
+}
+
+#portfolioLink {
+  position: absolute;
+  top: 6%;
+  left: 48%;
+  width: 7%;
+}
+
+#contactLink {
+  position: absolute;
+  top: 6%;
+  right: 17%;
+  margin: 0%;
+  width: 6%;
+}
+
+#acknowledgementDT {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:3;
+  width: 70%;
+  padding: 4rem;
+  left: 0;
+  right: 0;
+  opacity: 80%;
+  min-width: 70%;
+}
+
+#acknowledgementMB {
+  display: none;
+}
+
+@media (max-width: 891px) {
+  /* .bg::after {
+    background: url(./media/penningtonMobile.jpg);
+    background-size: cover;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-left: 0px;
+  } */
+
+  #logo {
+    width: 30vw;
+  }
+}
+
+
+/* @media screen and (max-width: 768px) {
+
+  .bg::after {
+    background: url(./media/penningtonMobile.jpg);
+    background-size: cover;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-left: 0px;
+  }
+
+  #logo {
+    top: 35%;
+    width: 30vw;
+  }
+
+  #selfPhotoDT {
+    display: none;
+  }
+
+  #selfPhotoMB {
+    display: block;
+    width: 100%;
+  }
+
+} */
+
+/* @media screen and (max-width: 600px) {
+
+  #logo {
+    width: 40vw;
+    top: 27%;
+  }
+
+  #description {
+    display: none;
+  }
+
+  section #description2 {
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    width: 78%;
+  }
+
+  #aboutLink {
+    width: 10%;
+    left:16%;
+  }
+  
+  #portfolioLink {
+    width: 14%;
+    left: 44%;
+  }
+  
+  #contactLink {
+    width: 11%;
+  }
+
+  #acknowledgementDT {
+    display: none;
+  }
+
+  #acknowledgementMB {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    z-index:3;
+    width: 70%;
+    padding: 2rem;
+    left: 0;
+    right: 0;
+    opacity: 80%;
+    min-width: 70%;
+  }
+
+} */
